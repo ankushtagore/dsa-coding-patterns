@@ -1,5 +1,10 @@
 # 🎯 Dynamic Programming Pattern
 
+> **2025 Interview Importance: ⭐⭐⭐⭐⭐ CRITICAL**  
+> The "Final Boss" of coding interviews. Master this, and you can solve almost anything.
+
+---
+
 ## 📖 What is it? (The "Notebook" Analogy)
 
 Imagine you're solving a huge math problem. Instead of doing the hard parts over and over again, you **write down the answer** to every small part in a notebook.

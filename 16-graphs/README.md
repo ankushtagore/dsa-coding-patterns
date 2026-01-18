@@ -1,5 +1,10 @@
 # 🕸️ Graph Algorithms Pattern
 
+> **2025 Interview Importance: ⭐⭐⭐⭐⭐ CRITICAL**  
+> Graph problems (DFS/BFS) are ubiquituous. "Number of Islands" is a test of life.
+
+---
+
 ## 📖 What is it? (In Layman's Terms)
 
 Imagine **Facebook friends**, **road maps**, or **computer networks**:

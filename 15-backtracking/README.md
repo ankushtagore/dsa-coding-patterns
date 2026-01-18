@@ -1,5 +1,10 @@
 # 🔄 Backtracking Pattern
 
+> **2025 Interview Importance: ⭐⭐⭐⭐ HIGH**  
+> Essential for "Search Space" problems (Sudoku, N-Queens). If you can't optimize it, Backtrack it.
+
+---
+
 ## 📖 What is it? (In Layman's Terms)
 
 Imagine you're in a **maze** trying to find the exit:
