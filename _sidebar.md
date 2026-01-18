@@ -1,4 +1,5 @@
 - [Home](README.md)
+- [🔥 2025 Interview Intel](INTERVIEW_LANDSCAPE_2025.md)
 - [Quick Reference](QUICK_REFERENCE.md)
 - [Course Summary](COURSE_SUMMARY.md)
 
@@ -29,3 +30,4 @@
   - [18 Bit Manipulation](18-bit-manipulation/README.md)
 
 - [Deep Dive Summary](DEEP_DIVE_SUMMARY.md)
+
