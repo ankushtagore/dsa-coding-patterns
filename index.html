@@ -7,8 +7,8 @@
   <meta name="description" content="A comprehensive guide to mastering coding patterns for FAANG interviews.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   
-  <!-- Theme: Simple Dark -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- Theme: Dark -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
   
   <style>
     :root {
@@ -17,18 +17,30 @@
     .markdown-section {
       max-width: 900px;
     }
-    nav.app-nav {
-      position: fixed;
-      margin: 10px 10px 10px 0;
+    /* Dark mode adjustments for mermaid */
+    .mermaid {
+      background: #2f2f2f;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+    }
+    /* Ensure code blocks look good in dark mode */
+    code {
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
   <div id="app">Loading...</div>
+  
   <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>
-    var num = 0;
-    mermaid.initialize({ startOnLoad: false });
+    mermaid.initialize({ 
+      startOnLoad: false,
+      theme: 'dark'
+    });
 
     window.$docsify = {
       name: 'FAANG Coding Patterns',
@@ -36,6 +48,7 @@
       loadSidebar: true,
       subMaxLevel: 3,
       auto2top: true,
+      themeColor: '#42b983',
       search: {
         maxAge: 86400000,
         paths: 'auto',
@@ -53,13 +66,20 @@
           code: function(code, lang) {
             if (lang === "mermaid") {
               return (
-                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+                '<div class="mermaid">' + code + '</div>'
               );
             }
             return this.origin.code.apply(this, arguments);
           }
         }
-      }
+      },
+      plugins: [
+        function(hook, vm) {
+          hook.doneEach(function() {
+            mermaid.init(undefined, '.mermaid');
+          });
+        }
+      ]
     }
   </script>
   <!-- Docsify v4 -->
