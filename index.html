@@ -25,10 +25,14 @@
 </head>
 <body>
   <div id="app">Loading...</div>
+  <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>
+    var num = 0;
+    mermaid.initialize({ startOnLoad: false });
+
     window.$docsify = {
       name: 'FAANG Coding Patterns',
-      repo: '', // User will fill this later
+      repo: 'https://github.com/ankushtagore/dsa-coding-patterns',
       loadSidebar: true,
       subMaxLevel: 3,
       auto2top: true,
@@ -43,6 +47,18 @@
         buttonText: 'Copy to clipboard',
         errorText: 'Error',
         successText: 'Copied'
+      },
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "mermaid") {
+              return (
+                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+              );
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
       }
     }
   </script>
@@ -50,8 +66,11 @@
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  
+  <!-- Syntax highlighting -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
 </body>
 </html>
