@@ -1,6 +1,39 @@
 # 📝 Quick Reference Guide - All Coding Patterns
 
-## 🎯 Pattern Recognition Flowchart
+## 🚀 Pattern Recognition Strategy (Quick Decision Tree)
+
+```mermaid
+flowchart TD
+    A[Read Problem] --> B{Array/String?}
+    B -->|Contiguous subarray/substring| C[Sliding Window]
+    B -->|Two ends/sorted| D[Two Pointers]
+    B -->|Finding K elements| E[Top K / Heap]
+    
+    A --> F{Tree/Graph?}
+    F -->|Level by level| G[BFS]
+    F -->|Path/branch| H[DFS]
+    F -->|Shortest path| I[Graph Algorithms]
+    
+    A --> J{Optimization?}
+    J -->|Overlapping subproblems| K[Dynamic Programming]
+    J -->|Greedy choice| L[Greedy]
+    
+    A --> M{Search space?}
+    M -->|Sorted/monotonic| N[Binary Search]
+    
+    A --> O{Generate combinations?}
+    O -->|All possibilities| P[Backtracking/Subsets]
+
+    style C fill:#90EE90
+    style D fill:#90EE90
+    style K fill:#FFD700
+    style G fill:#87CEEB
+    style P fill:#FFB6C1
+```
+
+---
+
+## 🎯 Detailed Pattern Recognition Flowchart
 
 ```mermaid
 flowchart TD
